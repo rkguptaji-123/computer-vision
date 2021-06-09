@@ -1,0 +1,28 @@
+#4.2 image crop some pArt of both image and swap it.
+import cv2
+
+ironman_hulk=cv2.imread("hulk.jpg")
+
+ironman_hulk.shape
+
+ironman_face=cv2.imread("ironman2.jpg")
+
+ironman_face.shape
+
+cv2.imshow("hulk",ironman_hulk)
+cv2.imshow("ironman2",ironman_face)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+crop_ironman_hulk=ironman_hulk[50:550,300:600]
+ironman_face[50:550,300:600]=crop_ironman_hulk
+cv2.imshow("Swapping" ,ironman_face)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+ironman_face=cv2.imread("ironman2.jpg")
+crop_ironman_face=ironman_face[50:500,300:750]
+ironman_hulk[50:500,300:750]=crop_ironman_face
+cv2.imshow("Swaping", ironman_hulk)
+cv2.waitKey()
+cv2.destroyAllWindows()
