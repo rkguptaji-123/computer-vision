@@ -1,0 +1,19 @@
+#create image by yourself Using Python Code
+import numpy as np
+import cv2
+
+smiley=np.zeros((250, 500, 3))
+
+#face
+cv2.circle(smiley, center=(250,130), radius=100 ,color=((0,128,0)), thickness= -1)
+#mouth
+cv2.circle(smiley, center=(250,160), radius=20 ,color=((0,0,15)), thickness= -1)
+#EYES
+
+cv2.circle(smiley, center=(250,100), radius=15 ,color=((23,0,0)), thickness= -1)
+
+cv2.circle(smiley, center=(300,100), radius=15 ,color=((23,0,0)), thickness= -1)
+
+cv2.imshow('hi', smiley)
+cv2.waitKey()
+cv2.destroyAllWindows()
