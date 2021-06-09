@@ -1,0 +1,24 @@
+import cv2
+import numpy as np
+
+dog_c=cv2.imread('dog.jpg')
+cv2.imshow('hello' , dog_c)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+dog3=cv2.imread('dog1.jpg')
+cv2.imshow('hello', dog3)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+dog_c.shape
+
+dog3.shape
+
+dog3=dog3[0:768, 0:1025]
+
+x=np.hstack((dog_c,dog3))
+
+cv2.imshow('combine' ,x)
+cv2.waitKey()
+cv2.destroyAllWindows()
